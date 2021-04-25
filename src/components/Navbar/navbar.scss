@@ -1,0 +1,130 @@
+@import "../../style/breakpoints.scss";
+@import "../../style/colors.scss";
+@import "../../style/variables.sass";
+@import "../../style/animations.scss";
+
+.navbar {
+  padding: 1rem 4rem 3rem;
+  z-index: 1;
+  background-color: transparent;
+  box-shadow: none !important;
+  background: linear-gradient(
+    0deg,
+    transparent 15%,
+    rgba(21, 21, 21, 0.8) 100%
+  );
+  .navbar-brand {
+    width: 100%;
+    align-items: center;
+
+    .logo {
+      cursor: pointer;
+    }
+    .mail {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 40px;
+      flex-grow: 1;
+      svg {
+        cursor: pointer;
+      }
+      svg:hover {
+        @include animation(fatten, 1s);
+        transform: scale3d(1.2, 1.2, 1.2);
+      }
+    }
+    .menu-button {
+      width: 24px;
+      height: 24px;
+      border: 0;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      user-select: none;
+      outline: none;
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+      @include tablet-up {
+        width: 35px;
+        height: 35px;
+      }
+
+      &.is-active {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  display: flex;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  top: 0;
+  height: 0;
+  background-color: $opaque;
+  overflow: hidden;
+
+  &.is-active {
+    height: 100%;
+  }
+}
+
+.menu-list-wrapper {
+  justify-content: flex-end;
+  position: fixed;
+  display: flex;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  top: 0;
+  height: 0;
+  background-color: #fff;
+  overflow: hidden;
+  transition: height 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+  .menu-list {
+    overflow: scroll;
+    padding: 200px 20px 0;
+    .navbar-item {
+      @include animation(ease-in, 4s);
+    }
+
+    @include tablet-up {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+
+      .navbar-item {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &.is-active {
+    z-index: 2;
+    height: 100%;
+  }
+}
+
+@include tablet {
+  .navbar {
+    padding: 1rem;
+
+    .logo {
+      svg {
+        height: 50px;
+        width: 140px;
+      }
+    }
+
+    .menu-list {
+      padding-top: 200px;
+    }
+  }
+}

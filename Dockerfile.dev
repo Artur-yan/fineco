@@ -1,0 +1,15 @@
+FROM node:15
+
+ARG UID
+
+RUN apt install autoconf libtool
+
+COPY . /app
+
+WORKDIR /app
+
+RUN yarn --cwd ./lambda/ install --frozen-lockfile
+
+RUN yarn --frozen-lockfile
+
+CMD [ "yarn", "develop" ]

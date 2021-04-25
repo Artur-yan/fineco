@@ -1,0 +1,4 @@
+---
+name: white
+color: "#FFFFFF"
+---

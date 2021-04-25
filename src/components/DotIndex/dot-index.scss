@@ -1,0 +1,28 @@
+@import '../../style/variables.sass';
+
+.dot-index {
+  background-color: transparent;
+  z-index: 1;
+  display: block;
+
+  .dot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+
+    .dot {
+      transition: height, width, 0.5s;
+      height: 2px;
+      width: 2px;
+      border-radius: 50%;
+      background-color: $white;
+
+      &.active {
+        height: 8px;
+        width: 8px;
+        background-color: $logo-color;
+      }
+    }
+  }
+}

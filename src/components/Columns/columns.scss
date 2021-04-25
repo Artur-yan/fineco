@@ -1,0 +1,9 @@
+@import "../../style/breakpoints.scss";
+
+.columns-container {
+  margin: auto;
+
+  @include phone {
+    padding-top: 3rem;
+  }
+}

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@import "./reset.css";
+@import "./fonts.css";
+@import "./variables.sass";
+$navbar-background-color: transparent;
+$navbar-item-hover-background-color: transparent;
+$navbar-box-shadow-size: 0 0 0 0;
+$navbar-box-shadow-color: trasparent;
+$white: #ffffff;
+@import "~bulma/bulma.sass";
+@import "./typography.scss";
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+body,
+html,
+body > div,
+body > div > div {
+  height: 100%;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.fillSpace {
+  width: 100%;
+  height: 100%;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+}

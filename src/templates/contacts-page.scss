@@ -1,0 +1,43 @@
+@import "../style/breakpoints.scss";
+@import "../style/variables.sass";
+@import "../style/colors.scss";
+
+.contacts {
+  width: 100%;
+  margin-top: $pages-top-margin;
+
+  .contact-form-section-wrapper {
+    background-color: $primary;
+
+    .contact-form-section {
+      padding: 80px 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 1000px;
+
+      .contact-claim {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+        max-width: 400px;
+      }
+
+      form {
+        input,
+        textarea {
+          border: none;
+        }
+
+        .error {
+          color: orange;
+        }
+        .label {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

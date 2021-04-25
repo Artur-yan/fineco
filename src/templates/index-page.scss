@@ -1,0 +1,19 @@
+@import "../style/breakpoints.scss";
+
+.index-page::-webkit-scrollbar {
+  display: none;
+}
+
+.index-page {
+  display: flex;
+  width: 100%;
+
+  .dot-index {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include tablet {
+      margin-left: 5%;
+    }
+  }
+}

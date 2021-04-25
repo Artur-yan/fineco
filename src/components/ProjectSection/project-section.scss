@@ -1,0 +1,91 @@
+@import "../../style/variables.sass";
+@import "../../style/breakpoints.scss";
+
+@mixin projectSectionImage {
+  height: 100%;
+  width: 100%;
+  max-height: $project-image-height-desktop;
+  max-width: $project-image-height-desktop;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clip-path: ellipse(50% 50% at center);
+
+  @include tablet {
+    max-height: $project-image-height-tablet;
+    max-width: $project-image-height-tablet;
+  }
+}
+
+@mixin projectSectionContainer {
+  position: absolute;
+  right: 10px;
+  left: 50%;
+  top: 50%;
+
+  @include tablet {
+    top: 50%;
+    left: 0;
+  }
+
+  .project-title {
+    height: auto;
+    z-index: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    padding: 0.75rem;
+  }
+}
+
+.project-section {
+  display: flex;
+  width: 100%;
+  padding: 3rem;
+  position: relative;
+  align-items: center;
+  margin-bottom: 100px;
+
+  @include tablet {
+    padding: 2rem;
+    margin-bottom: 60px;
+  }
+
+  .project-image {
+    @include projectSectionImage();
+    width: $project-image-height-desktop;
+    height: $project-image-height-desktop;
+
+    @include tablet {
+      width: $project-image-height-tablet;
+      height: $project-image-height-tablet;
+    }
+  }
+
+  .container {
+    @include projectSectionContainer();
+
+    .project-title {
+      @include tablet {
+        margin-top: 120px;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

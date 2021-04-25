@@ -1,0 +1,22 @@
+@import "../style/breakpoints.scss";
+.project {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+
+  .header-image {
+    display: flex;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: -350px;
+    clip-path: ellipse(80% 25% at 50% 50%);
+    transform: translateX(0) translateY(-50%);
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "preserve",
+    "noEmit": true,
+    "allowJs": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "lib": ["dom", "esnext"],
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@models/*": ["models/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src", "typings"],
+  "exclude": ["node_modules", "public", ".cache"]
+}

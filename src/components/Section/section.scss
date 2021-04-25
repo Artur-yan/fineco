@@ -1,0 +1,12 @@
+@import '../../style/breakpoints.scss';
+
+.section {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 4rem;
+
+  @include tablet {
+    padding: 1rem;
+  }
+}

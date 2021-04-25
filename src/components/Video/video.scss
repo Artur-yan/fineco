@@ -1,0 +1,31 @@
+@import "../../style/breakpoints.scss";
+
+.video {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  video {
+    display: flex;
+    width: 100%;
+  }
+
+  &.full-page {
+    overflow: hidden;
+    display: flex;
+    position: relative;
+
+    video {
+      width: auto;
+      max-width: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin: auto;
+      min-height: 100vh;
+      min-width: 100vw;
+      transform: translate(-50%, 0);
+    }
+  }
+}

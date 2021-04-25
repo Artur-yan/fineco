@@ -1,0 +1,28 @@
+@import "../../style/breakpoints.scss";
+@import "../../style/colors.scss";
+
+.footer {
+  padding: 3rem 4rem;
+  width: 100%;
+  background-color: $secondary;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+  }
+
+  > .columns {
+    width: 100%;
+
+    .footer-section-title {
+      color: #fff;
+      text-transform: none;
+    }
+    .footer-section-body {
+      color: #fff;
+      text-transform: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../style/colors.scss";
+
+.initial-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: $primary;
+  overflow: hidden;
+  transition: right 0.8s ease-in-out;
+
+  &.closed {
+    right: 100%;
+  }
+}

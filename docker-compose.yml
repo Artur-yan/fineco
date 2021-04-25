@@ -1,0 +1,29 @@
+version: "3.5"
+services:
+  squash-proxy:
+    container_name: squash-proxy
+    image: nginx:mainline-alpine
+    stdin_open: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./proxy.conf:/etc/nginx/conf.d/default.conf"
+      - "./certs:/etc/nginx/certs"
+      - "../:/app"
+  squash:
+    container_name: squash
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - "./:/app"
+      - /app/node_modules
+    user: "$UID"
+    environment:
+      APP_DEBUG: "true"
+      APP_ENV: "development"
+      PORT: "8006"
+    working_dir: "/app"
+    depends_on:
+      - squash-proxy

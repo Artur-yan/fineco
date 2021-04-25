@@ -1,0 +1,29 @@
+@import "../../style/breakpoints.scss";
+@import "../../style/colors.scss";
+
+.title-section {
+  padding: 3rem 4rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    padding: 3rem 1rem;
+  }
+
+  .title-section-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    .title-section-title {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../style/breakpoints.scss";
+@import "../../style/colors.scss";
+
+.title-with-columns-section {
+  padding: 3rem 4rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    padding: 3rem 1rem;
+  }
+
+  .title-with-columns-section-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+    padding: 3rem 4rem;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    .title-with-columns-section-head {
+      @include desktop-up {
+        margin-bottom: 25px;
+      }
+
+      color: $secondary-faint;
+    }
+
+    .title-with-columns-section-title {
+      text-align: center;
+      @include desktop-up {
+        margin-bottom: 60px;
+      }
+    }
+
+    .title-with-columns-section-rows {
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

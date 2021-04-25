@@ -1,0 +1,16 @@
+@import "../../style/breakpoints.scss";
+
+.full-size-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  @include tablet {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .html-content {
+    margin-bottom: 0;
+  }
+}

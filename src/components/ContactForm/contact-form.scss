@@ -1,0 +1,63 @@
+@import "../../style/breakpoints.scss";
+@import "../../style/breakpoints.scss";
+@import "../../style/colors.scss";
+@import "../../style/helpers.scss";
+
+form::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  overflow: scroll;
+
+  input {
+    height: 45px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  .label {
+    margin-top: 10px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+
+    &.error {
+      border: solid 1px $primary-light;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $primary;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-top: 30px;
+
+    @include tablet-up {
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .success,
+  .error {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+
+  .success {
+    color: $success-green;
+  }
+
+  .error {
+    color: $primary-light;
+  }
+}
